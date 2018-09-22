@@ -1,0 +1,25 @@
+import Foundation
+import UIKit
+
+protocol {{ module_info.name }}ViewCellDelegate: class {
+
+}
+
+struct {{ module_info.name}}ViewCellObject {
+
+    weak var delegate: {{ module_info.name }}ViewCellDelegate?
+}
+
+class {{ module_info.name }}ViewCell: UITableViewCell {
+
+    weak var delegate: {{ module_info.name }}ViewCellDelegate?
+}
+
+extension {{ module_info.name }}ViewCell: BaseTableViewCell {
+
+    func configure(for object: Any?) {
+        guard let object = object as? {{ module_info.name }}ViewCellObject else { return }
+
+        delegate = object.delegate
+    }
+}

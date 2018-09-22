@@ -1,0 +1,15 @@
+# Template information section
+name: "base_viper_module"
+summary: "Swift VIPER module template with UIViewController playing as a View."
+author: "Hash"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+- {name: Screen.swift, path: Code/screen.swift.liquid}
+- {name: ScreenInitializer.swift, path: Code/initializer.swift.liquid}
+- {name: ScreenPresenter.swift, path: Code/presenter.swift.liquid}
+- {name: ScreenViewController.swift, path: Code/viewcontroller.swift.liquid}
+- {name: ScreenView.swift, path: Code/view.swift.liquid}

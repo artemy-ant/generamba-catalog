@@ -1,0 +1,22 @@
+import Foundation
+
+
+protocol {{ module_info.name }}ScreenModuleInput: BaseModuleInput {
+    
+}
+
+protocol {{ module_info.name }}ScreenModuleOutput: BaseModuleOutput {
+    
+}
+
+protocol {{ module_info.name }}ScreenViewInput: BaseViewInput {
+    var viewOutput: {{ module_info.name }}ScreenViewOutput? { get set }
+}
+
+protocol {{ module_info.name }}ScreenViewOutput: BaseViewOutput {
+    
+}
+
+protocol {{ module_info.name }}ScreenPresenterProtocol: {{ module_info.name }}ScreenModuleInput, {{ module_info.name }}ScreenViewOutput {
+    
+}

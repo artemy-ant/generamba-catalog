@@ -1,0 +1,24 @@
+import Foundation
+import Swinject
+
+class {{ module_info.name }}ScreenInitializer {
+
+    class func initialize(moduleOutput: {{ module_info.name }}ScreenModuleOutput) -> UIViewController? {
+        guard let viewInput = appContainer.resolve({{ module_info.name }}ScreenViewInput.self) else { return nil }
+
+        viewInput.viewOutput = appContainer.resolve({{ module_info.name }}ScreenPresenterProtocol.self, arguments: viewInput, moduleOutput)
+        return viewInput.viewController()
+    }
+
+    class func register(for container: Container) {
+
+        container.register({{ module_info.name }}ScreenPresenterProtocol.self) { r, viewInput, moduleOutput in
+            return {{ module_info.name }}ScreenPresenter(viewInput: viewInput, moduleOutput: moduleOutput)
+        }
+
+        container.register({{ module_info.name }}ScreenViewInput.self) { r in
+            {{ module_info.name }}ScreenViewController(nibName: "{{ module_info.name }}ScreenView", bundle: nil)
+        }
+    }
+
+}

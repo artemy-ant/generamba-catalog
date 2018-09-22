@@ -1,0 +1,21 @@
+import Foundation
+
+class {{ module_info.name }}ScreenPresenter: {{ module_info.name }}ScreenPresenterProtocol {
+
+    unowned let viewInput: {{ module_info.name }}ScreenViewInput
+    unowned let moduleOutput: {{ module_info.name }}ScreenModuleOutput
+
+    init(viewInput: {{ module_info.name }}ScreenViewInput, moduleOutput: {{ module_info.name }}ScreenModuleOutput) {
+        self.viewInput = viewInput
+        self.moduleOutput = moduleOutput
+    }
+}
+
+extension {{ module_info.name }}ScreenPresenter: {{ module_info.name }}ScreenViewOutput {
+
+}
+
+extension {{ module_info.name }}ScreenPresenter {
+    
+}
+
