@@ -10,7 +10,7 @@ struct {{ module_info.name}}ViewCellObject {
     weak var delegate: {{ module_info.name }}ViewCellDelegate?
 }
 
-class {{ module_info.name }}ViewCell: UICollectionViewCell {
+final class {{ module_info.name }}ViewCell: UICollectionViewCell {
 
     weak var delegate: {{ module_info.name }}ViewCellDelegate?
 }

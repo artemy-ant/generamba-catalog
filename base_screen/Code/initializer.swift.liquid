@@ -1,7 +1,7 @@
 import Foundation
 import Swinject
 
-class {{ module_info.name }}ScreenInitializer {
+final class {{ module_info.name }}ScreenInitializer {
 
     class func initialize(moduleOutput: {{ module_info.name }}ScreenModuleOutput) -> UIViewController? {
         guard let viewInput = appContainer.resolve({{ module_info.name }}ScreenViewInput.self) else { return nil }
