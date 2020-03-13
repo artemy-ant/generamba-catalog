@@ -1,0 +1,12 @@
+# Template information section
+name: "base_request"
+summary: "Base request"
+author: "Artemy"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+- {name: Request.swift, path: Code/request.swift.liquid}
+- {name: Response.swift, path: Code/response.swift.liquid}
