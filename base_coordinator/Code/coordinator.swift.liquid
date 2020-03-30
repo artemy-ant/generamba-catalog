@@ -1,0 +1,28 @@
+import Foundation
+import Swinject
+
+protocol {{ module_info.name }}FlowDelegate: class {
+    
+}
+
+protocol {{ module_info.name }}FlowCoordinatorProtocol: BaseFlowProtocol {
+    
+}
+
+final class {{ module_info.name }}FlowCoordinator: BaseFlowCoordinator, {{ module_info.name }}FlowCoordinatorProtocol {
+    
+    weak var viewController: UINavigationController?
+    unowned let delegate: {{ module_info.name }}FlowDelegate
+        
+    init(delegate: {{ module_info.name }}FlowDelegate) {
+        self.delegate = delegate
+    }
+    
+    func launchViewController() -> UIViewController? {
+        return nil
+    }
+}
+
+extension {{ module_info.name }}FlowCoordinator {
+    
+}
